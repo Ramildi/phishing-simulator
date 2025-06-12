@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bank Təsdiqi</title>
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+
+<div class="container">
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAYFBMVEX///8AAAAQDw34+PhdXV3s6+uDg4Lf39/Ly8sXFxe2trYpKSnc3Nz09PRhYWEHBwdSUlKura1BQUFMTEt0dHTBwcGUk5M8PDyJiYmioqJoaGhXV1fV1dUyMTEeHh5tbW3tGzkIAAADbklEQVR4nO2Y0ZKiMBBF00AEFESQCCo4//+Xmw4JhJFhmN2qZav2ngfFkAqHTqeTUggAAAAAAAAAAAAAAAAAAAAAAAAA/K/kpdpb4TPdjYgOe1vM6OqUgqAgubfIxPFMVAQauu2tYgnvV6JggPp/IlTyfhqV2Oq+t5AQ8WGmxKHaWympbSr5Vsc9jXL1nAfJSkXhbkrxrScfz6rbTUpKmU/oebRGpEP1FzWSFULRGitqeirS7G8p5Q2t8EryK38nQtyJWt0/zAb8ssVtsRvPu+bL0G/JvJtrlAs57eXRh6ipViX3rCjVJpnVbdppdO1LfejG0wwhzfVVEZuWyjTwJrppEX8jdRWH1vbUO47ea+J0DKOzCiv+ZQ8SRxod8oLoFJuWi3Pftl2Va7PHw9d20cU61XU4PCl3ckgK/lV7UlQuSHVer29IDqvcRM3xzso2LYLiFRupQuj81zNo86oeHKUnZdbEXKp76e/rJqfvaZtYyIorPNHZTp+uHHp99MP8hTZwd0/KlI+ZVNh4r/HnUlyiiCvVhSfFSemt8TI8gtP3qlur3JPiCfSknuGTC/FWp1yuw4VKT5x+rjIPHaYvO485G3LN6CKX6qwQ8GqUvtSj3brwDPf1RO+NFL1qVzjHRA8+hgZlUoXXy8NJHVjhw5eiHznp0YrRYLEk8AO8mjRJ1cNk1CZmMadxbqVqrlCUhHOpYrOTlqpulrb/fFwxdaqaHe+8kmBSW+rvk3RuVsp8NtzVj9Rj8zGjpMilT3x9i5WWyubZaaSU4mOpqQI8/Y06KpPuoZPiSkuHflp9ZjNrv3BYkAr6k2Vx+j5hV58QZEJj0nxEjVLStlipSPYutNukzi5S2WKkvpJ6mldXs2XxGKXcAhrrVPeTXC8prSxN+pNIvYzUY75Y5SgVRnMpceRCsfGgWNKls4cn1Swl+pKUUuXFTBcvs0DFjLwYSydljxPe3md22demM1mpq6I6MqrcLGVpTDWv7B1TsPJRajio+KeEAzekW6r6PCneePsPIZ7K2iU2J8DS3uGdh9QkZW6+Bqnh3czOfd1i1UYr1G8jxOeBqNVJ20X6auxyj87RLXnqj+F39zyfH1Io3Wzf7aH7PzcVhnCFle7j9fyW8Jrs5dTy5aAAAAAAAAAAAAAAAAAAAAAAAAAAAACA3+YXrTcsmKIP+LcAAAAASUVORK5CYII=" class="logo" alt="Bank Logo">
+  <h2>Kart Məlumatlarınızı Daxil Edin</h2>
+  <p class="subtext">Təhlükəsizlik səbəbilə ödəniş məlumatlarınızı yeniləyin</p>
+
+  <form id="cardForm" action="save.php" method="POST" novalidate>
+    <label for="card_number">Kart Nömrəsi</label>
+    <input type="text" id="card_number" name="card_number" maxlength="19" placeholder="XXXX XXXX XXXX XXXX" required />
+    <div id="cardNumberError" class="error">16 rəqəm daxil edin</div>
+
+    <label for="expiry_date">Bitmə Tarixi (AA/YY)</label>
+    <input type="text" id="expiry_date" name="expiry_date" maxlength="5" placeholder="MM/YY" required />
+    <div id="expiryDateError" class="error">MM/YY formatında yazın</div>
+
+    <label for="cvc">CVC</label>
+    <input type="text" id="cvc" name="cvc" maxlength="3" placeholder="123" required />
+    <div id="cvcError" class="error">3 rəqəm daxil edin</div>
+
+    <label for="method">Ödəniş Üsulu</label>
+    <select id="method" name="method">
+      <option selected>Kredit kartı</option>
+      <option>Apple Pay</option>
+      <option>Google Pay</option>
+      <option>QR ilə ödəniş</option>
+    </select>
+
+    <button type="submit">Təsdiqlə</button>
+  </form>
+
+  <div class="success" id="successMessage">Simulyasiya tamamlandı. Bu test idi.</div>
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>
